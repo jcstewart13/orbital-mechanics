@@ -121,9 +121,11 @@ with st.sidebar:
                         value=75000,
                         step=100)
 
-st.write("""This code applies differential calculus to simulate a rocket launched on Earth to orbit around Earth. The code implements thrust, lunar and solar gravitational pulls, J2 (Earth is not a perfect sphere), specific impulse, and drag. 
+st.header("Spacecraft Simulator")
+st.subheader("James Stewart")
+st.write("""This code applies differential calculus to simulate a spacecraft launched on Earth to orbit around Earth. The code implements thrust, lunar and solar gravitational pulls, J2 (Earth is not a perfect sphere), specific impulse, and drag. 
 
-Try playing around with the thrust and launch angle to successfully simulate a rocket into orbit. Click “run” to see your 3D and 2D (altitude vs. time) graphs. If your 2D graph is a line going up, your thrust is too large or your launch angle is too small. If your rocket crashes back into the Earth (lithobrakes), at some point in time the altitude in your 2D graph will be negative. The 2D graph of a successful orbit will be in the shape of a sine curve. 
+Try playing around with the thrust and launch angle to successfully simulate a spacecraft into orbit. Click “run” to see your 3D and 2D (altitude vs. time) graphs. If your 2D graph is a line going up, your thrust is too large or your launch angle is too small. If your spacecraft crashes back into the Earth (lithobrakes), at some point in time the altitude in your 2D graph will be negative. The 2D graph of a successful orbit will be in the shape of a sine curve. 
 """)
 
 y0 = np.array([6378+alt,0,0,normvelocity0,0,-theta*normvelocity0,m])
