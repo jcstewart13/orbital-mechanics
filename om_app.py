@@ -136,7 +136,7 @@ fig, ax = plt.subplots()
 ax.plot(sol.t, np.sqrt(sol.y[0]**2+sol.y[1]**2+sol.y[2]**2)-6378)
 st.write(fig)
 
-st.subheader('3d plot')
+st.subheader('3D Orbit Plot')
 fig = plt.figure(figsize=(10, 10))
 ax = fig.add_subplot(projection='3d')
 ax.plot(sol.y[0], sol.y[1], sol.y[2])
