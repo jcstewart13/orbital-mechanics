@@ -105,12 +105,12 @@ with st.sidebar:
                       step=.0001,
                       format="%0.4f"
                       )
-    INIT_THRUST = st.number_input(label = "Intial Thrust for the First 50 Seconds",
+    INIT_THRUST = st.number_input(label = "Thrust for the First 50 Seconds",
                         min_value=0,
                         max_value=2500,
                         value=1000,
                         step=100)
-    FIN_THRUST = st.number_input(label = "Intial Thrust for the Last 1150 Seconds",
+    FIN_THRUST = st.number_input(label = "Thrust for the Last 1150 Seconds",
                         min_value=0,
                         max_value=2500,
                         value=1000,
