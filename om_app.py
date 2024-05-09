@@ -131,9 +131,11 @@ Try playing around with the thrust and launch angle to successfully simulate a s
 y0 = np.array([6378+alt,0,0,normvelocity0,0,-theta*normvelocity0,m])
 sol=scipy.integrate.solve_ivp(df, [0,input_rt], y0, max_step = 500)
 
-st.subheader('altitude (km) vs time (s)')
+st.subheader('Altitude vs. Time')
 fig, ax = plt.subplots()
 ax.plot(sol.t, np.sqrt(sol.y[0]**2+sol.y[1]**2+sol.y[2]**2)-6378)
+ax.set_xlabel('Time (s)')
+ax.set_ylabel('Altitude (km)')
 st.write(fig)
 
 st.subheader('3D Orbit Plot')
